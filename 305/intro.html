@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html">
+   
+   <head>
+      <title>3H </title>
+   </head>
+   
+   <body>
+ 
+</div>
+<div style="text-align:center">
+      
+		
+<h1>Welcome to 3H </h1> 
+<a href="loginClient.php">Login</a><br>
+<a href="about.php">About</a><br>
+
+
+</div>
+
+<div id="Contact" class="tabcontent" style="text-align:center">
+  <h3>Contact</h3>
+  <p>Address: SUNY KOREA, songdo</p>
+  <p>Phone Number: 010-1234-5678</p>
+  <p>Operating Hours: Mon-Fri, 9:00 - 18:00</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+  </body> 
+</html>
