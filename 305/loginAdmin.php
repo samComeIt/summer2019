@@ -4,7 +4,7 @@
    <div style="text-align:center">
       <title>3H </title>
    </head>
-   
+   <?php print "<font size = '7' color='orange'>3H</font>"; ?>
    <body><h1>Login as Admin</h1></html></div>
 
 
