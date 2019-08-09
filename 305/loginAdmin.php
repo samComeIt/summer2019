@@ -5,7 +5,8 @@
       <title>3H </title>
    </head>
    <?php print "<font size = '7' color='orange'>3H</font>"; ?>
-   <body><h1>Login as Admin</h1></html></div>
+   <body style="background-color:#F5DEB3"><h1>Login as Admin</h1>
+   </body></html></div>
 
 
 <?php   //loginAdmin.php
