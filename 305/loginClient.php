@@ -5,7 +5,8 @@
       <title>3H </title>
    </head>
    <?php print "<font size = '7' color='orange'>3H</font>"; ?>
-   <body style="background-color:#F0F8FF"><h1>Login as Client</h1>
+   <body style="background-color:#F0F8FF">
+   <h1>Login as Client</h1>
    </body></html></div>
 
 <?php	//loginClient.php
@@ -17,19 +18,18 @@ Code worte by San Hae Kim and Kyu Hee Park*/
   if ($conn->connect_error) die($conn->connect_error);
     echo "<div style=\"text-align:center\">";
    echo <<<_END
-  <form action="loginClient.php" method="post"><pre>
-    <div class="login_page">
-	<div class="form">
+  <form action="loginClient.php" method="post"><pre><div class="login_page"><div class="form">
 	<form class = "register_form">
 	ID:     	<input type=text name="username">
     Password:      	<input type=text name="password">
     
-    <button><input type="submit" value="Login"></button>
+	<button><input type="submit" value="Login"></button>
      </form>
 </div>
 </div>	 
     <a href="loginAdmin.php">Login as Admin?</a> 	<a href="createAccount.php">No account? Create Account</a>
   </pre></form>
+  
 _END;
 
 //Set variable
