@@ -20,8 +20,8 @@
    <body>
    <header>
    <nav>
-   <li><h2><a href="welcome.php">Go back to Client page</a> </h2></li>
-   <li><h2><a href="viewCart.php">View Cart</a> </h2></div></li>
+   <li><h3><a href="welcome.php">Go back to Client page</a> </h3></li>
+   <li><h3><a href="viewCart.php">View Cart</a> </h3></div></li>
        <h1><div style="text-align:center">Add TV Products</h1>     
 	  </nav>
    </header>
