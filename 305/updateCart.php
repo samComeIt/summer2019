@@ -1,9 +1,30 @@
+<?php
+   include('sessionCart.php');
+echo "<div style=\"text-align:center\">";
+?>
 <html>
+<body style="background-color:#F0F8FF">
    <head>
+   <style>
+	  li {
+		 display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#AEE0C5;
+		text-align:center;
+	  }
+	  </style> 
       <title>Update Cart </title>
    </head>
    
    <body>
+   <header>
+   <nav>
+   <li><h3><a href="welcome.php">Go back to Client page</a></h3></li>
+   <li><h3><a href="updateCart.php">Cancel Edit</a></h3></li>
+   </nav>
+   </header>
+   
        <h1><div style="text-align:center">Update Cart</div></h1> 
 	  
 </html>
@@ -11,7 +32,7 @@
 <?php   //editProfile.php
   require_once 'hhh3login.php';
   $conn = new mysqli($hn, $un, $pw, $db);
-  include('sessionCart.php');
+
   if ($conn->connect_error) die($conn->connect_error);
 echo "<div style=\"text-align:center\">";
    echo <<<_END
@@ -21,13 +42,8 @@ echo "<div style=\"text-align:center\">";
     Model Name:   		$editC_productId
     Cost:    		$$editC_cost
     Number of Items:   <input type="text" name="numberofItem" value = $editC_numberofItem>
-   
-
-    
-    <a href="updateCart.php">Cancel Edit</a> <input type="submit" value="Update Number of Items">
-	
-  <a href="javascript:history.go(-1)" title="Return to previous page">&laquo; Go back</a>
-
+  
+    <input type="submit" value="Update Number of Items">
   </pre></form>
 _END;
 
