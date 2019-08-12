@@ -16,7 +16,7 @@
 	  }
 	  </style>   
    </head>
-   <body>
+   </body>
    <header>
    <nav>
    <li><h3><a href="welcome.php">Go back to Client page</a></h3></li>
