@@ -1,11 +1,27 @@
 <html>
+<body style="background-color:#F0F8FF"> 
    <head>
+   <div style="text-align:center">
       <title>Payment information</title>
+	  <style>
+	  li {
+		 display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#AEE0C5;
+	  }
+	  </style>
    </head>
    
    <body>
+	<header>
+   <nav>
+   <li><h3><a href="welcome.php">Go to Client page</a></h3></li>
+   <li><h3><a href="payment.php">Clear output</a></h3></li>
+   </nav>
+   </header>
        <h1><div style="text-align:center">Payment information</div></h1> 
-	  
+	  </div>
 </html>
 </html>
 
@@ -28,10 +44,6 @@
 	
     <input type="submit" value="Pay">
     
-  <a href="payment.php">Clear output</a>
-	<a href="welcome.php">Go to Client page</a>
-  
-
   </pre></form>
 _END;
 

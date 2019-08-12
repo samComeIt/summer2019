@@ -1,14 +1,29 @@
 <html>
-   <head>
-      <title>View Cart </title>
+   <body style="background-color:#F0F8FF">
+     <head> 
+	 <div style="text-align:center">
+	 <title>View Cart</title>
+	  <style>
+	  li {
+		 display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#AEE0C5;
+	  }
+	  </style>
    </head>
    
-   <body>
-       <h1><div style="text-align:center">View Cart </div>
-		
-      </h1> 
-    
-</html>
+   </body>
+       
+    <body>
+	<header>
+   <nav>
+   <li><h3><a href="welcome.php">Go back to Client page</a> </h3><li>
+   <li><h3><a href="payment.php">Purchase</a> </h3></li>
+   </nav></header>
+</body>
+<h1><div style="text-align:center">View Cart</div></h1> 
+</div>
 </html>
 <?php	//manageQuantity.php
   require_once 'hhh3login.php';
@@ -30,10 +45,7 @@ if (isset($_POST['delete']) && isset($_POST['productId'])) {
   Model Name: 	<input type="text" name="productId">
   <input type="submit" value="EDIT SELECTED ITEM ">
   </pre></form>
-  <a href="welcome.php">Go back to Client page</a> 
-  <a href="payment.php">Purchase</a> 
-  <a href="javascript:history.go(-1)" title="Return to previous page">&laquo; Go back</a>
-   
+ 
 _END;
   $query = "SELECT * FROM Cart2 WHERE clientId = '$login_session'";
   $result = $conn->query($query);
