@@ -1,19 +1,37 @@
+<?php
+   include('session.php');
+   echo "<div style=\"text-align:center\">";
+
+?>
 <html>
+<body style="background-color:#F0F8FF">
    <head>
-      <title>Add TV Products </title>
+   <style>
+	  li {
+		 display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#AEE0C5;
+		text-align:center;
+	  }
+	  </style>   
    </head>
    
    <body>
-       <h1><div style="text-align:center">Add TV Products</h1>
-		<h3><a href="welcome.php">Go back to Client page</a> </h3>
-		<h3><a href="viewCart.php">View Cart</a> </h3></div>
-      </h1> 
+   <header>
+   <nav>
+   <li><h2><a href="welcome.php">Go back to Client page</a> </h2></li>
+   <li><h2><a href="viewCart.php">View Cart</a> </h2></div></li>
+       <h1><div style="text-align:center">Add TV Products</h1>     
+	  </nav>
+   </header>
+  	</body>
 </html>
-</html>
+
 <?php // TV.php
 
   require_once 'hhh3login.php';
-  include('session.php');
+  //include('session.php');
   $conn = new mysqli($hn, $un, $pw, $db);
   if ($conn->connect_error) die($conn->connect_error);
 

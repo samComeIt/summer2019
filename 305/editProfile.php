@@ -1,13 +1,29 @@
 <html>
+<body style="background-color:#F0F8FF">
    <head>
+   <div style="text-align:center">
       <title>Edit Profile </title>
-   </head>
-   
-   <body>
-       <h1><div style="text-align:center">Edit Profile</div></h1> 
+	  <style>
+	  li {
+		 display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#AEE0C5;
+	  }
+	  </style>
 	  
+   </head>
+
+   </body>
+   <header>
+   <nav>
+   <li><h3><a href = "welcome.php">Go back to Client page</a></h3></li>
+   <li><h3><a href="editProfile.php">Cancel Edit</a></h3></li>  </nav>
+   </header>
+       <h1><div style="text-align:center">Edit Profile</div></h1> 
+	  </div>
 </html>
-</html>
+
 <?php   //editProfile.php
   require_once 'hhh3login.php';
   $conn = new mysqli($hn, $un, $pw, $db);
@@ -19,7 +35,7 @@
 	
   <form action="editProfile.php" method="post"><pre>
     Full name:   		<input type="text" name="fullname" value = $login_name>
-    Username:    		$login_clientId
+    Username:    				$login_clientId
     Password:    		<input type="text" name="password" value = $login_pw>
     Address:     		<input type="text" name="address" value = $login_address>
     Phone number:  		<input type="text" name="phonenumber" value = $login_phonenumber>
@@ -27,8 +43,7 @@
     Date of birth(YYYY-MM-DD):	<input type="text" name="dateofbirth" value = $login_dateofbirth>
 
     
-    <a href="editProfile.php">Cancel Edit</a> <input type="submit" value="Update Account">
-	<a href = "welcome.php">Go back to Client page</a>
+   <input type="submit" value="Update Account">
  
   </pre></form>
 _END;
