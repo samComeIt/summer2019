@@ -1,20 +1,35 @@
+<?php
+   include('session.php');
+   echo "<div style=\"text-align:center\">";
+
+?>
 <html>
+<body style="background-color:#F0F8FF">
    <head>
+   <style>
+	  li {
+		 display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#AEE0C5;
+		text-align:center;
+	  }
+	  </style>  
       <title>Add Fridge Products </title>
    </head>
    
-   <body>
-       <h1><div style="text-align:center">Add Fridge Products </div>
-		<h3><a href="welcome.php">Go back to Client page</a> </h3>
-		<h3><a href="viewCart.php">View Cart</a> </h3>
-      </h1> 
-    
-</html>
-</html>
+   </body>
+   <header>
+   <nav>
+   <li><h3><a href="welcome.php">Go back to Client page</a></h3></li>
+   <li><h3><a href="viewCart.php">View Cart</a> </h3></li>
+   </nav>
+   </header>
+       <h1><div style="text-align:center">Add Fridge Products </div> </h1> 
+    </html>
 <?php // AC.php
 
   require_once 'hhh3login.php';
-  include('session.php');
   $conn = new mysqli($hn, $un, $pw, $db);
   if ($conn->connect_error) die($conn->connect_error);
 
