@@ -1,5 +1,30 @@
-<?php	//manageDiscount.php
+<?php  //welcomAdmin.php
   require_once 'hhh3login.php';
+echo "<div style=\"text-align:center\">";
+?>
+<html>
+<body style="background-color:#F5DEB3">
+
+   <head>
+   <style>
+	  li {
+		  display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#FFFFF0;
+	  }
+	  </style>
+	  </head>
+   <header>
+   <nav>
+   <li><h3><a href="welcomeAdmin.php">Go back to Admin page</a></h3></li>
+   </nav>
+   </header>
+   <h1><div style="text-align:center">Manage Discount </div></h1>
+   </body>
+   
+<?php	//manageDiscount.php
+ 
   session_start();
   $conn = new mysqli($hn, $un, $pw, $db);
   if ($conn->connect_error) die($conn->connect_error);
@@ -8,10 +33,7 @@
   <form action="manageDiscount.php" method="post"><pre>
     Discount ID:     		<input type=text name="discountId">
     
-    <input type="submit" value="Search">
-
-   
-     <a href="welcomeAdmin.php">Go back to Admin page</a>               
+    <input type="submit" value="Search">     
   </pre></form>
 _END;
 echo <<<_END

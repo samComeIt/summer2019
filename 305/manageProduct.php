@@ -18,10 +18,9 @@ echo "<div style=\"text-align:center\">";
    <header>
    <nav>
    <li><h3><a href="welcomeAdmin.php">Go back to Admin page</a></h3></li>
+   </nav></header>
    </body>
-       <h1><div style="text-align:center">Manage Products </div>
-
-      </h1> 
+       <h1><div style="text-align:center">Manage Products </div></h1>
 </html>
 <?php // manageProduct.php
   

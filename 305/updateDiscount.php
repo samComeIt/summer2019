@@ -1,7 +1,25 @@
+<?php  //welcomAdmin.php
+  require_once 'hhh3login.php';
+echo "<div style=\"text-align:center\">";
+?>
 <html>
+<body style="background-color:#F5DEB3">
    <head>
-      <title>Update Discount Percentage </title>
-   </head>
+   <style>
+	  li {
+		  display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#FFFFF0;
+	  }
+	  </style>
+	  </head>
+   <header>
+   <nav>
+   <li><h3><a href="welcomeAdmin.php">Go back to Admin page</a></li>
+   <li><h3><a href="updateDiscount.php">Reset</a></h3></li>
+   </nav>
+   </header>
    
    <body>
        <h1><div style="text-align:center">Update Discount Percentage</div></h1> 
@@ -9,7 +27,7 @@
 </html>
 </html>
 <?php   //editProfile.php
-  require_once 'hhh3login.php';
+  
   $conn = new mysqli($hn, $un, $pw, $db);
   include('sessionDiscount.php');
   if ($conn->connect_error) die($conn->connect_error);
@@ -22,9 +40,7 @@ echo "<div style=\"text-align:center\">";
     Disount $select_discountPercentage% when total is at least $$select_discountWhen
     Disount Percentage:    		<input type="text" name="dp" value = $select_discountPercentage>%
    
-
-    
-    <a href="updateDiscount.php">Reset</a> <input type="submit" value="Update Discount Percentage">
+    <input type="submit" value="Update Discount Percentage">
 	
   <a href="javascript:history.go(-1)" title="Return to previous page">&laquo; Go back</a>
 
