@@ -21,7 +21,7 @@ echo "<div style=\"text-align:center\">";
    </header>
    
    <body>
-       <h1><div style="text-align:center">Manage Delievery</div></h1> 
+       <h1><div style="text-align:center">Manage Delivery</div></h1> 
 	  
 </html>
 <?php	//manageDelivery.php
