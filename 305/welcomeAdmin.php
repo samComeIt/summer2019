@@ -18,8 +18,8 @@ echo "<div style=\"text-align:center\">";
    </head>
    <header>
    <nav>
-   <li><h2><a href = "viewProfileAdmin.php">View Profile</a></h2></li>
-   <li><h2><a href = "logout.php">Sign Out</a></h2></li>
+   <li><h3><a href = "viewProfileAdmin.php">View Profile</a></h3></li>
+   <li><h3><a href = "logout.php">Sign Out</a></h3></li>
    </nav>
    </header>
    </body>
