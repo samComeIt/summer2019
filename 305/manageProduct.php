@@ -1,17 +1,30 @@
+<?php  //welcomAdmin.php
+  require_once 'hhh3login.php';
+echo "<div style=\"text-align:center\">";
+?>
 <html>
+<body style="background-color:#F5DEB3">
    <head>
+   <style>
+	  li {
+		 display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#FFFFF0;
+	  }
+	  </style>
       <title>Manage Products </title>
    </head>
-   
-   <body>
+   <header>
+   <nav>
+   <li><h3><a href="welcomeAdmin.php">Go back to Admin page</a></h3></li>
+   </body>
        <h1><div style="text-align:center">Manage Products </div>
 
       </h1> 
-    
-</html>
 </html>
 <?php // manageProduct.php
-  require_once 'hhh3login.php';
+  
   $conn = new mysqli($hn, $un, $pw, $db);
   if ($conn->connect_error) die($conn->connect_error);
 echo "<div style=\"text-align:center\">";
@@ -45,12 +58,12 @@ echo "<div style=\"text-align:center\">";
       isset($_POST['cost'])&&
       isset($_POST['stockId'])&&
       isset($_POST['quantity'])) {
-    $maker   = get_post($conn, 'maker');
-    $productId    = get_post($conn, 'productId');
-    $type = get_post($conn, 'type');
-    $cost = get_post($conn, 'cost');
-	$stockId = get_post($conn, 'stockId');
-    $quantity = get_post($conn, 'quantity');
+    $maker   		= get_post($conn, 'maker');
+    $productId		= get_post($conn, 'productId');
+    $type			= get_post($conn, 'type');
+    $cost			= get_post($conn, 'cost');
+	$stockId		= get_post($conn, 'stockId');
+    $quantity		= get_post($conn, 'quantity');
 	
 	$query1 = "SELECT productId FROM Products WHERE productId='$productId'";
 	$result1   = $conn->query($query1);
@@ -92,30 +105,16 @@ echo "<div style=\"text-align:center\">";
 	   
   echo <<<_END
   <form action="manageProduct.php" method="post"><pre>
-Maker:  <input type="text" name="maker">
-  Model Name:<input type="text" name="productId">
-  Cost:     $<input type="text" name="cost">
-  Product Type: <td><input type="radio" name="type" value="AC"/>AC</td><td><input type="radio" name="type" value="Fridge"/>Fridge</td><td><input type="radio" name="type" value="Washer"/>Washer</td><td><input type="radio" name="type" value="TV"/>TV</td>
-  Stock ID:<input type="text" name="stockId">
-  Quantity:<input type="text" name="quantity">
+	Maker:  	<input type="text" name="maker">
+	Model Name:	<input type="text" name="productId">
+	Cost:     	$<input type="text" name="cost">
+	Product Type: <td><input type="radio" name="type" value="AC"/>AC</td><td><input type="radio" name="type" value="Fridge"/>Fridge</td><td><input type="radio" name="type" value="Washer"/>Washer</td><td><input type="radio" name="type" value="TV"/>TV</td>
+	Stock ID:	<input type="text" name="stockId">
+	Quantity:	<input type="text" name="quantity">
            <input type="submit" value="ADD PRODUCT">
-
- 
   </pre></form>
-  <a href="welcomeAdmin.php">Go back to Admin page</a> 
-  <a href="javascript:history.go(-1)" title="Return to previous page">&laquo; Go back</a>
 _END;
 
-/*
- <p>List Box - Type<br>
-  <select name="listbox" size="4">
-  <option value="Option 1" selected>AC</option>
-  <option value="Option 2">Fridge</option>
-  <option value="Option 3">TV</option>
-  <option value="Option 4">Washer</option>
-  </select>
-</p>
-*/
 
   $query  = "SELECT * FROM Products ORDER BY type";
   $result = $conn->query($query);
@@ -132,6 +131,7 @@ _END;
      Model Name: $row[1]
      Type: $row[2]
       </pre>
+	  
   <form action="manageProduct.php" method="post">
   <form action="manageProduct.php" method="post">
   <input type="hidden" name="delete" value="yes">
@@ -139,7 +139,10 @@ _END;
   <input type="hidden" name="type" value="$row[2]">
   <input type="submit" value="DELETE">
 </form>
-_END;;
+
+_END;
+;
+
   }
   
   $result->close();
@@ -148,5 +151,6 @@ _END;;
   function get_post($conn, $var) {
     return $conn->real_escape_string($_POST[$var]);
   }
-
+echo '<p><a href="javascript:history.go(-1)" title="Return to previous page">&laquo; Go back</a></p>';
+  
 ?>

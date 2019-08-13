@@ -1,5 +1,29 @@
-<?php	//manageQuantity.php
+<?php  //welcomAdmin.php
   require_once 'hhh3login.php';
+echo "<div style=\"text-align:center\">";
+?>
+<html>
+<body style="background-color:#F5DEB3">
+
+   <head>
+   <style>
+	  li {
+		  display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#FFFFF0;
+	  }
+	  </style>
+	  </head>
+   <header>
+   <nav>
+   <li><h3><a href="welcomeAdmin.php">Go back to Admin page</a></h3></li>
+   </nav>
+   </header>
+   </body>
+	  
+<?php	//manageQuantity.php
+  
   session_start();
   $conn = new mysqli($hn, $un, $pw, $db);
   if ($conn->connect_error) die($conn->connect_error);
@@ -9,9 +33,7 @@
     Stock ID:     		<input type=text name="stockId">
     
     <input type="submit" value="Search">
-
-   
-     <a href="welcomeAdmin.php">Go back to Admin page</a>               
+           
   </pre></form>
 _END;
  echo <<<_END
