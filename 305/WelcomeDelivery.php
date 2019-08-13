@@ -1,15 +1,26 @@
 <?php
    include('sessionDelivery.php');
    echo "<div style=\"text-align:center\">";
-   /* <h1>Client ID <?php echo $login_clientId; ?></h1> 
-	  <h1>Password <?php echo $login_pw; ?></h1> 
-	  <h1>Name <?php echo $login_name; ?></h1> */
 ?>
 <html">
-   
+   <body style="background-color:#F5DEB3">
    <head>
-      <title>Welcome </title>
-   </head>
+   <style>
+	  li {
+		  display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#FFFFF0;
+	  }
+	  </style>
+	  </head>
+   <header>
+   <nav>
+   <li><h3><a href="welcomeAdmin.php">Go back to Admin page</a></h3></li>
+   <li><h3><a href = "updateDelivery.php">Update Delivery Status</a></h3></li>
+   <li><h3><a href = "manageDelivery.php">Update Different Client's Delivery</a></h3></li>
+   </nav>
+   </header>
    
    <body>
       <h3>Welcome <?php echo $delivery_clientId; ?></h3> 
@@ -18,10 +29,7 @@
 	  <h3>Address: <?php echo $delivery_address; ?></h3> 
 	  <h3>Current Delivery Status: <?php echo $delivery_currStatus; ?></h3>
 	  
-      <h3><a href = "updateDelivery.php">Update Delivery Status</a>   </h3><h3><a href = "manageDelivery.php">Update Different Client's Delivery</a></h3>
-	  
-	  
-	  
+       
    </body>
    
 </html>

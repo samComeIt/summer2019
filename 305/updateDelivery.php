@@ -1,15 +1,31 @@
+<?php  //welcomAdmin.php
+  require_once 'hhh3login.php';
+echo "<div style=\"text-align:center\">";
+?>
 <html>
+<body style="background-color:#F5DEB3">
    <head>
-      <title>Update Delivery </title>
-   </head>
-   
+   <style>
+	  li {
+		  display: inline-block;
+			margin-right:10px;		 
+		color:#B0C4DE;
+		background-color:#FFFFF0;
+	  }
+	  </style>
+	  </head>
+   <header>
+   <nav>
+   <li><h3><a href="welcomeAdmin.php">Go back to Admin page</a></h3></li>
+   <li><h3><a href="updateDelivery.php">Cancel Edit</a></h3></li>
+   </nav>
+   </header>
    <body>
-       <h1><div style="text-align:center">Update Delivery</div></h1> 
-	  
-</html>
+       <h1><div style="text-align:center">Update Delivery Status</div></h1> 
+</body>
 </html>
 <?php   //editProfile.php
-  require_once 'hhh3login.php';
+ 
   $conn = new mysqli($hn, $un, $pw, $db);
   include('sessionDelivery.php');
   if ($conn->connect_error) die($conn->connect_error);
@@ -28,7 +44,7 @@ echo "<div style=\"text-align:center\">";
   <td><input type="radio" name="currStatus" value="On it's way"/>On it's way</td> <td><input type="radio" name="currStatus" value="Delivered"/>Delivered</td> 
   
  
-    <a href="updateDelivery.php">Cancel Edit</a> <input type="submit" value="Update Delivery Status">
+    <input type="submit" value="Update Delivery Status">
 	
   <a href="javascript:history.go(-1)" title="Return to previous page">&laquo; Go back</a>
 

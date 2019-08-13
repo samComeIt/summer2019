@@ -17,7 +17,7 @@ echo "<div style=\"text-align:center\">";
    <header>
    <nav>
    <li><h3><a href="welcomeAdmin.php">Go back to Admin page</a></li>
-   <li><h3><a href="updateDiscount.php">Reset</a></h3></li>
+   <li><h3><a href="updateDiscount.php">Cancel Edit</a></h3></li>
    </nav>
    </header>
    
